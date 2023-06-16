@@ -1,0 +1,10 @@
+
+#!/bin/sh
+
+set -eu
+
+rm -rf vendor
+composer dump-autoload
+echo '*' > vendor/.gitignore
+git add vendor -f
+git commit -m "Update autoload"
